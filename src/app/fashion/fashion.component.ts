@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FashionService } from 'src/app/fashion/fashion.service';
+
 
 @Component({
   selector: 'app-fashion',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FashionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data: FashionService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.fashionList = this.data.fashionList
   }
-
+fashionList: any =[];
 }

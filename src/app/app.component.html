@@ -1,7 +1,17 @@
-<nav class="nav">
+<nav class="nav nav-pills nav-fill">
+  <a *ngFor="let menu of navMenu" (click)="activateNavMenu(menu.id)" [ngClass]="menu.classes" aria-current="page"
+    href="#" [routerLink]="menu.routeto">{{menu.name}}</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+
+
+
+<!-- <nav class="nav">
   <a class="nav-link" href="#" routerLink="home">Home</a>
   <a class="nav-link" href="#" routerLink="mobiles">Mobiles</a>
   <a class="nav-link" href="#" routerLink="laptops">Laptops</a>
   <a class="nav-link" href="#" routerLink="sneakers">Sneakers</a>
 </nav>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
